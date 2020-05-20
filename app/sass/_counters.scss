@@ -1,0 +1,44 @@
+.counters {
+  padding: 20px 15px;
+  background-color: #251d1a;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    dl {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+
+      dd {
+        color: #ffffff;
+        font-size: 30px;
+      }
+
+      dt {
+
+        p {
+          color: #c7b299;
+        }
+
+      }
+
+    }
+
+  }
+
+}
+@media (min-width: $phone-landscape) {
+
+}
+@media (min-width: $tablet-portrait) {
+
+}
+@media (min-width: $tablet-landscape) {
+
+}
+@media (min-width: $desktop) {
+
+}

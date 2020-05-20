@@ -1,0 +1,51 @@
+.pagination {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  margin-top: 50px;
+
+  .page-numbers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    margin-right: 10px;
+    padding: 0 10px;
+    border-radius: 3px;
+    border: none;
+    white-space: nowrap;
+    line-height: 19px;
+    background-color: #9FB93C;
+    color: #fff;
+    @include main-text;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: background-color .3s ease;
+
+    &:hover {
+      background-color: #648347;
+    }
+
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .pagination {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .pagination {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .pagination {
+
+  }
+}
+@media (min-width: $desktop) {
+  .pagination {
+
+  }
+}

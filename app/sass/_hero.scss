@@ -1,0 +1,52 @@
+.hero {
+  background-image: url("../img/hero-1.jpg");
+  background-position: center;
+  background-size: auto;
+  padding: 60px 15px;
+
+  &__slider {
+    position: relative;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    border-radius: 8px;
+    z-index: 1;
+
+    &-pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+      z-index: 1;
+
+      span{
+        transition: background-color .3s ease;
+      }
+
+    }
+  }
+
+  &__slide {
+    text-align: center;
+
+    &-layout {
+      color: #ffffff;
+
+    }
+  }
+
+}
+
+@media (min-width: $phone-landscape) {
+
+}
+@media (min-width: $tablet-portrait) {
+
+}
+@media (min-width: $tablet-landscape) {
+
+}
+@media (min-width: $desktop) {
+  .hero {
+    padding: 380px 60px 140px;
+  }
+}

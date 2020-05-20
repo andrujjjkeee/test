@@ -1,0 +1,13 @@
+@mixin common-topic() {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+}
+@mixin main-text() {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+}
+
+@mixin common-text() {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
