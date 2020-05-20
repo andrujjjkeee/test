@@ -8,7 +8,47 @@ $( function(){
         new  Tabs( $( this ) );
     } );
 
+    $.each( $( '.hero' ), function() {
+        new  InitSlider( $( this ) );
+    } );
+
 } );
+
+var InitSlider = function( obj ) {
+
+    //private properties
+    var _obj = obj,
+        _swiperSlider = _obj.find('.hero__slider'),
+        _btnPrev = _obj.find( '.hero__btn-prev' ),
+        _btnNext = _obj.find( '.hero__btn-next' ),
+        _pagination = _obj.find( '.hero__pagination' ),
+        _swiper;
+
+    //private methods
+    var _initSlider = function(){
+
+            _swiper = new Swiper(_swiperSlider, {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                loop: true,
+                threshold: 10,
+                navigation: {
+                    nextEl: _btnNext,
+                    prevEl: _btnPrev
+                }
+            });
+
+        },
+        _construct = function() {
+            _initSlider();
+        };
+
+    //public properties
+
+    //public methods
+
+    _construct();
+};
 
 var SiteOldAnimations = function() {
 

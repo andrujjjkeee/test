@@ -1,14 +1,17 @@
 .hero {
-  background-image: url("../img/hero-1.jpg");
-  background-position: center;
-  background-size: auto;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
   padding: 60px 15px;
+  background: url("../img/hero-1.jpg") center;
+  background-size: auto;
 
   &__slider {
     position: relative;
     margin: 0 auto;
     padding-bottom: 30px;
     border-radius: 8px;
+    overflow: hidden;
     z-index: 1;
 
     &-pagination {
@@ -27,15 +30,90 @@
 
   &__slide {
     text-align: center;
+  }
 
-    &-layout {
-      color: #ffffff;
+  &__content{
+    color: #fff;
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 24px;
+
+    p{
+
+      &:first-child{
+        @include Raleway;
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 1;
+      }
 
     }
+
+    h1, h2, h3{
+      @include Raleway;
+      font-size: 52px;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .btn{
+      margin-top: 20px;
+    }
+
+  }
+
+  &__prev-btn,
+  &__next-btn{
+    position: absolute;
+    width: 29px;
+    height: 29px;
+    border: 2px solid #199F29;
+    border-radius: 50%;
+    z-index: 4;
+    transition: border-color .3s ease;
+
+    &:before{
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      transform: rotate(45deg);
+      box-sizing: border-box;
+      transition: border-color .3s ease;
+      content: '';
+    }
+
+  }
+
+  &__prev-btn{
+    left: 20px;
+
+    &:before{
+      top: calc( 50% - 4px );
+      left: calc( 50% - 2px );
+      border-left: 2px solid #199F29;
+      border-bottom: 2px solid #199F29;
+    }
+
+  }
+
+  &__next-btn{
+    right: 20px;
+
+    &:before{
+      top: calc( 50% - 4px );
+      right: calc( 50% - 2px );
+      border-top: 2px solid #199F29;
+      border-right: 2px solid #199F29;
+    }
+
+  }
+
+  &__pagination{
+
   }
 
 }
-
 @media (min-width: $phone-landscape) {
 
 }
@@ -47,6 +125,6 @@
 }
 @media (min-width: $desktop) {
   .hero {
-    padding: 380px 60px 140px;
+
   }
 }
