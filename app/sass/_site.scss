@@ -14,9 +14,20 @@
   }
 
   &__header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 15px 0;
+    z-index: 5;
 
     &-layout{
       display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      max-width: 1170px;
+      margin: 0 auto;
     }
 
   }

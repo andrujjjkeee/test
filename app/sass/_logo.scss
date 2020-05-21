@@ -1,0 +1,33 @@
+.logo {
+  display: block;
+  width: 135px;
+  z-index: 4;
+
+  img, svg{
+    display: block;
+    width: 100%;
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .logo {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .logo {
+      width: 182px;
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .logo {
+
+  }
+}
+@media (min-width: $desktop) {
+  .logo {
+
+  }
+}
+

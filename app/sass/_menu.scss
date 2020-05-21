@@ -1,0 +1,112 @@
+.menu {
+  list-style: none;
+  @include Montserrat;
+  font-size: 16px;
+  font-weight: 300;
+
+  li{
+    margin-bottom: 20px;
+  }
+
+  a{
+    color: #fff;
+    transition: color .3s ease;
+
+    &:hover{
+      color: #c7b299;
+    }
+
+  }
+
+  &--main{
+    margin-bottom: 20px;
+
+  }
+
+  &--icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    li{
+      width: 24px;
+      height: 24px;
+      margin: 0 12px;
+
+      img{
+        display: block;
+      }
+
+      a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: inherit;
+        height: inherit;
+        transition: opacity .3s ease;
+
+        &:hover{
+          opacity: .8;
+        }
+
+      }
+
+      &:first-child{
+        margin-left: 0;
+      }
+
+      &:last-child{
+        margin-right: 0;
+      }
+
+    }
+
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .menu {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .menu {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 14px;
+
+    li{
+      margin-bottom: 0;
+    }
+
+    a{
+
+    }
+
+    &--main{
+      margin-bottom: 0;
+
+      li:not(:last-child){
+        margin-right: 28px;
+      }
+
+    }
+
+    &--icons{
+      margin-left: 60px;
+    }
+
+  }
+}
+@media (min-width: $desktop) {
+  .menu {
+
+  }
+}
+

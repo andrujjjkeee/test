@@ -4,6 +4,8 @@ $( function(){
 
     new SiteOldAnimations();
 
+    new  MobileMenu( $( '.mobile-menu' )  );
+
     $.each( $( '.tabs' ), function() {
         new  Tabs( $( this ) );
     } );
@@ -13,6 +15,81 @@ $( function(){
     } );
 
 } );
+
+var MobileMenu = function( obj ) {
+
+    //private properties
+    var _self = this,
+        _obj = obj,
+        _mobileBtn = $( '.hamburger' ),
+        _html = $( 'html' ),
+        _body = $( 'body' ),
+        _site = _body.find( '.site' ),
+        _window = $( window ),
+        _position = 0;
+
+    //private methods
+    var _onEvent = function() {
+
+            _mobileBtn.on( 'click', function () {
+
+                if ( $( this ).hasClass( 'is-active' ) ){
+                    _hideMobileMenu();
+                } else {
+                    _showMobileMenu();
+                }
+
+                return false;
+            } );
+
+        },
+        _hideMobileMenu = function () {
+
+            _mobileBtn.removeClass( 'is-active' );
+
+            _obj.removeClass( 'is-show' );
+
+            _html.css( 'overflow-y', 'visible' );
+            _body.removeAttr( 'style' );
+            _site.removeAttr( 'style' );
+
+            _window.scrollTop( _position );
+
+        },
+        _showMobileMenu = function () {
+
+            _mobileBtn.addClass( 'is-active' );
+
+            _obj.addClass( 'is-show' );
+
+            _position = _window.scrollTop();
+
+            _html.css( 'overflow-y', 'hidden' );
+            _body.css( 'overflow-y', 'hidden' );
+
+            _site.css( {
+                'position': 'relative',
+                'top': _position * -1
+            } );
+
+        },
+        _construct = function() {
+            _onEvent();
+
+            _obj[ 0 ].obj = _self;
+
+        };
+
+    //public properties
+    _self.opened = false;
+
+    //public methods
+    _self.closeMenu = function(){
+        _hideMobileMenu();
+    };
+
+    _construct();
+};
 
 var InitSlider = function( obj ) {
 
