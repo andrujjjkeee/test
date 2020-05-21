@@ -1,0 +1,15 @@
+User-Agent: *
+Disallow: /app
+Disallow: /cgi-bin
+Disallow: dist/wp-login.php
+Disallow: dist/wp-admin/
+Disallow: dist/wp-includes/
+Disallow: dist/wp-content/
+Disallow: dist/wp-content/plugins/
+Disallow: dist/wp-content/themes/
+Disallow: dist/?author=*
+Disallow: *.sql
+Disallow: gulpfile.js
+Disallow: package.json
+Disallow: package-lock.json
+Allow: /

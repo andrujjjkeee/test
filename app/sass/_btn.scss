@@ -6,7 +6,9 @@
   max-width: 170px;
   height: 50px;
   margin: 0 auto;
-  border-radius: 8px;
+  padding-top: 4px;
+  border-bottom: 4px solid #736357;
+  border-radius: 2px;
   background-color: #998675;
   color: #ffffff;
   @include Raleway;
@@ -14,4 +16,11 @@
   font-weight: 800;
   line-height: 20px;
   text-transform: uppercase;
+  transition: all .3s ease;
+
+  &:hover{
+    padding-top: 0;
+    border-bottom-width: 0;
+  }
+
 }

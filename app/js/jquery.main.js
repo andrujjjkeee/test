@@ -35,6 +35,10 @@ var InitSlider = function( obj ) {
                 navigation: {
                     nextEl: _btnNext,
                     prevEl: _btnPrev
+                },
+                pagination: {
+                    el: _pagination,
+                    type: 'bullets',
                 }
             });
 
